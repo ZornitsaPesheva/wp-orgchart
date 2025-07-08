@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // created by WordPress's wp_localize_script and contains data
     // passed from PHP (like AJAX URL, nonce, and initial data).
     if (typeof orgchart_ajax === 'undefined') {
-        console.error('Error: orgchart_ajax object not found. Please ensure wp_localize_script is working correctly.');
+        // console.error('Error: orgchart_ajax object not found. Please ensure wp_localize_script is working correctly.');
         return; // Exit if critical data is missing.
     }
 
@@ -92,36 +92,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Check if the operation was successful based on the server's response.
             if (result.success) {
-                console.log('OrgChart data updated successfully:', result.message);
+                // console.log('OrgChart data updated successfully:', result.message);
                 // In a more complex app, you might re-load data here if server assigns new IDs,
                 // but OrgChart.js handles ID generation for new nodes well client-side.
             } else {
-                console.error('Error updating OrgChart data:', result.message);
+                // console.error('Error updating OrgChart data:', result.message);
                 // Inform the user about the error.
                 alert('Error: ' + result.message + ' Please check console for details.');
             }
         } catch (error) {
             // Catch any network or parsing errors during the fetch operation.
-            console.error('Fetch error during OrgChart data update:', error);
+            // console.error('Fetch error during OrgChart data update:', error);
             alert('A network error occurred while trying to update OrgChart data.');
         }
     }
 
     // Event listener for when a node's data is updated.
     chart.onUpdateNode(function(args) {
-        console.log("OrgChart: Node updated. Sending data to server...", args.newData);
+        // console.log("OrgChart: Node updated. Sending data to server...", args.newData);
         sendOrgChartData('update', args.newData); // Send the new node data to the server.
     });
 
     // Event listener for when a node is removed.
     chart.onRemoveNode(function(args) {
-        console.log("OrgChart: Node removed. Sending ID to server...", args.id);
+        // console.log("OrgChart: Node removed. Sending ID to server...", args.id);
         sendOrgChartData('remove', {}, args.id); // Send an empty data object but pass the ID.
     });
 
     // Event listener for when a new node is added.
     chart.onAddNode(function(args) {
-        console.log("OrgChart: Node added. Sending data to server...", args.data);
+        // console.log("OrgChart: Node added. Sending data to server...", args.data);
         sendOrgChartData('add', args.data); // Send the new node's data to the server.
     });
 
