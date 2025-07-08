@@ -17,7 +17,13 @@ License: GPLv2 or later
  */
 function orgchart_enqueue_scripts() {
     // Enqueue the Balkan OrgChart.js library.
-    wp_enqueue_script( 'balkan-orgchart', 'https://cdn.balkan.app/orgchart.js', array(), '1.0', true );
+    wp_enqueue_script(
+        'balkan-orgchart',
+        plugin_dir_url( __FILE__ ) . 'assets/js/orgchart.js',
+        array(),
+        '1.0',
+        true
+    );
 
     // Enqueue our custom JavaScript for OrgChart initialization and AJAX handling.
     // It depends on 'balkan-orgchart' to ensure it loads after the library.
