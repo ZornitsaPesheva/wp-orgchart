@@ -57,7 +57,7 @@ Since the chart data is stored as a JSON string in the options table, you can ba
 
 1. Example of a loaded organizational chart.
 2. Edit form for adding or modifying a team member.
-3. Context menu for managing nodes.
+3. Node menu for managing nodes.
 
 == Changelog ==
 
