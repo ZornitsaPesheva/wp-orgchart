@@ -1,0 +1,12 @@
+html, body {
+    width: 100%;
+    height: 100%; /* Keep height 100% for the initial render area */
+    padding: 0;
+    margin: 0;
+    /* Removed overflow: hidden; to allow page scrolling */
+    font-family: Helvetica;
+}
+#tree {
+    width: 80%; /* Changed width from 100% to 80% */
+    height: 100%;
+}
