@@ -73,3 +73,14 @@ First release. No upgrade steps necessary.
 
 This plugin is licensed under the GPLv2 or later.
 OrgChart JS by BALKAN App is used under its own license.
+
+== Privacy ==
+
+This plugin includes a third-party library (OrgChart.js) that may make requests to external servers (e.g. Azure CDN) for functionality such as data processing or asset loading.
+
+**External services used:**
+- https://functions.azure.com (used by OrgChart.js)
+
+**Data sent:** No personal data is transmitted by default.
+
+**Control:** Currently, there is no opt-out. If you prefer a self-hosted version without external calls, please contact the plugin author.
