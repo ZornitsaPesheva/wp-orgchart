@@ -19,7 +19,6 @@
 ## 🧑‍💻 Author
 
 Developed by [BALKAN App](https://balkan.app)  
-License: GPLv2 or later
 
 ---
 
