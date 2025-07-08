@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // The first argument is the DOM element where the chart will be rendered.
     // The second argument is an object containing chart configuration options.
     let chart = new OrgChart(document.getElementById("tree"), {
+        mode: "dark", // Sets the chart theme to 'light'.
+        template: "olivia", // Use the 'ula' template for the chart nodes.
         mouseScrool: OrgChart.action.scroll, // Allows mouse wheel scrolling/zooming within the chart area.
         // Define the context menu that appears when a node is right-clicked.
         nodeMenu: {

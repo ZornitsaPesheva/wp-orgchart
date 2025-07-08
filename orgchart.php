@@ -4,6 +4,7 @@ Plugin Name: OrgChart
 Description: An OrgChart plugin using Balkan OrgChart JS with data update.
 Version: 1.0.0
 Author: BALKAN App
+License: GPLv2 or later
 */
 
 /**
